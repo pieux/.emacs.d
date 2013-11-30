@@ -83,13 +83,14 @@
 (prefer-coding-system 'utf-8)
 
 
-;; setq & setq-default 
+;; setq & setq-default
 (setq sentence-end-double-space nil
       delete-by-moving-to-trash t
       mark-ring-max 64
       global-mark-ring-max 128
-      ring-bell-function 'ignore)
- 
+      ring-bell-function 'ignore
+      longlines-show-hard-newlines t)
+
 (setq-default
  indent-tabs-mode nil
  blink-cursor-delay 0
