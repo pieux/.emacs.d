@@ -110,5 +110,4 @@
 (random t) ;; seed
 
 
-
 (provide 'init-default)
