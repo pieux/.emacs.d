@@ -11,4 +11,10 @@
       (package-refresh-contents))
     (package-install package)))
 
+(defmacro bind (&rest commands)
+  "Convience macro which creates a lambda interactive command."
+  `(lambda ()
+     (interactive)
+     ,@commands))
+
 (provide 'init-util)
