@@ -13,7 +13,8 @@
 (setq ido-save-directory-list-file (concat user-emacs-directory ".cache/ido.last"))
 
 (ido-mode t)
-(ido-everywhere t)
+;; disable for error: dired ls is not support
+;; (ido-everywhere t)
 
 (require-package 'ido-ubiquitous)
 (ido-ubiquitous-mode t)
