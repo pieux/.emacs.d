@@ -15,8 +15,9 @@
 (set-face-background 'hl-line "#3e4446")
 (set-face-foreground 'highlight nil)
 
-;; show matching parenthess 
-(show-paren-mode t)
+;; show matching parenthess
+;; replace with smartparens
+;; (show-paren-mode t)
 (setq-default indent-tabs-mode nil)
 
 ;; *TO LEARN*: copy & paste

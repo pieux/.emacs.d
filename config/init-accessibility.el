@@ -34,4 +34,8 @@
 (after 'smex
   (global-set-key (kbd "M-x") 'smex))
 
+;; the silver search
+(require-package 'ag)
+(require 'ag)
+
 (provide 'init-accessibility)

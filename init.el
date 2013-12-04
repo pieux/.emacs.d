@@ -18,7 +18,9 @@
 (require 'pkg-misc)
 (require 'pkg-markdown)
 (require 'pkg-auto-complete)
-(require 'pkg-clojure)
 (require 'pkg-expand-region)
+(require 'pkg-projectile)
+
+(require 'pkg-clojure)
 
 (require 'keymap-evil)
