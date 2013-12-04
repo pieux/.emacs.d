@@ -14,4 +14,8 @@
 (after 'linum
   (ac-linum-workaround))
 
+(after 'auto-complete
+  (define-key ac-completing-map (kbd "C-n") 'ac-next)
+  (define-key ac-completing-map (kbd "C-p") 'ac-previous))
+
 (provide 'pkg-auto-complete)
