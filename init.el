@@ -20,6 +20,7 @@
 (require 'pkg-auto-complete)
 (require 'pkg-expand-region)
 (require 'pkg-projectile)
+(require 'pkg-smartparens)
 
 (require 'pkg-clojure)
 
