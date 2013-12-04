@@ -29,3 +29,4 @@
 (require 'keymap-evil)
 
 (require 'pkg-clojure)
+(require 'pkg-auto-complete)

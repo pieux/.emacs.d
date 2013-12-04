@@ -96,7 +96,7 @@
  blink-cursor-delay 0
  blink-cursor-interval 0.4
  line-spacing 0.2
- truncate-lines t)
+ truncate-lines nil)
 
 
 (which-function-mode t)

@@ -2,5 +2,4 @@
 (require-package 'clojure-test-mode)
 (require-package 'cider)
 
-
 (provide 'pkg-clojure)
