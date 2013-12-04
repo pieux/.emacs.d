@@ -27,6 +27,8 @@
         )))
 
   (define-key evil-insert-state-map (kbd "RET") 'evil-ret-and-indent)
+  (define-key evil-motion-state-map "j" 'evil-next-visual-line)
+  (define-key evil-motion-state-map "k" 'evil-previous-visual-line)
 
   ) ;; eof (after 'evil
 
