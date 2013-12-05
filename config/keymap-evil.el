@@ -1,5 +1,10 @@
 ;; key chord means hit two keys simultaneously, or a single key quickly pressed twice
 (after 'evil
+
+  ;; use Emacs keymap
+  (define-key evil-insert-state-map (kbd "C-n") 'next-line)
+  (define-key evil-insert-state-map (kbd "C-p") 'previous-line)
+
   (require-package 'key-chord)
   (key-chord-mode 1)
 
@@ -25,6 +30,9 @@
       (evil-leader/set-key
         "w w" 'ace-jump-word-mode
         )))
+
+  (after 'evil-nerd-commenter
+    (evilnc-default-hotkeys))
 
   (define-key evil-insert-state-map (kbd "RET") 'evil-ret-and-indent)
   (define-key evil-motion-state-map "j" 'evil-next-visual-line)

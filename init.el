@@ -8,20 +8,25 @@
 
 (require 'cl)
 
+;; prefered config
 (require 'init-packages)
 (require 'init-util)
 (require 'init-default)
 (require 'init-eyecandy)
 (require 'init-accessibility)
 
+;; enhance editor
 (require 'pkg-evil)
 (require 'pkg-misc)
-(require 'pkg-markdown)
 (require 'pkg-auto-complete)
 (require 'pkg-expand-region)
 (require 'pkg-projectile)
 (require 'pkg-smartparens)
 
+;; lang specific
+(require 'pkg-markdown)
 (require 'pkg-clojure)
+(require 'pkg-web)
 
+;; individual keymap
 (require 'keymap-evil)
