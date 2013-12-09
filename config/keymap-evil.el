@@ -1,9 +1,11 @@
 ;; key chord means hit two keys simultaneously, or a single key quickly pressed twice
 (after 'evil
 
-  ;; use Emacs keymap
+  ;; use Emacs keymap in inserte state
   (define-key evil-insert-state-map (kbd "C-n") 'next-line)
   (define-key evil-insert-state-map (kbd "C-p") 'previous-line)
+  (define-key evil-insert-state-map (kbd "C-d") 'delete-backward-char)
+  (define-key evil-insert-state-map (kbd "C-e") 'end-of-visual-line)
 
   (require-package 'key-chord)
   (key-chord-mode 1)
