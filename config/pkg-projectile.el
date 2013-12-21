@@ -1,4 +1,6 @@
 (require-package 'projectile)
+
+(setq projectile-enable-caching t)
 (setq projectile-cache-file (concat user-emacs-directory ".cache/projectile.cache"))
 (setq projectile-known-projects-file (concat user-emacs-directory ".cache/projectile-bookmarks.eld"))
 (require 'projectile)

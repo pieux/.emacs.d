@@ -7,38 +7,56 @@
   (define-key evil-insert-state-map (kbd "C-d") 'delete-backward-char)
   (define-key evil-insert-state-map (kbd "C-e") 'end-of-visual-line)
 
-  (require-package 'key-chord)
-  (key-chord-mode 1)
+  ;; like vim behavior
+  (define-key evil-insert-state-map (kbd "RET") 'evil-ret-and-indent)
+  (define-key evil-motion-state-map "j" 'evil-next-visual-line)
+  (define-key evil-motion-state-map "k" 'evil-previous-visual-line)
+
+  ;; (require-package 'key-chord)
+  ;; (key-chord-mode 1)
 
   ;; not very good, I prefer Ctrl-[
   ;; (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
   ;; (key-chord-define evil-insert-state-map "kj" 'evil-normal-state)
 
-  (after 'ace-jump-mode
-    (key-chord-define evil-normal-state-map "jw" 'ace-jump-word-mode)
-    (key-chord-define evil-normal-state-map "jc" 'ace-jump-char-mode)
-    (key-chord-define evil-normal-state-map "jl" 'ace-jump-line-mode))
+  ;; key-chord is not very cosy, disable now; use leader
+  ;; (after 'ace-jump-mode
+  ;; (key-chord-define evil-normal-state-map "jw" 'ace-jump-word-mode)
+  ;; (key-chord-define evil-normal-state-map "jc" 'ace-jump-char-mode)
+  ;; (key-chord-define evil-normal-state-map "jl" 'ace-jump-line-mode))
 
   (after 'smex
     (define-key evil-visual-state-map (kbd "SPC SPC") 'smex)
     (define-key evil-normal-state-map (kbd "SPC SPC") 'smex))
 
+  ;; (after 'evil-nerd-commenter
+  ;; (evilnc-default-hotkeys))
+
+  (define-key evil-normal-state-map (kbd "C-p") 'projectile-find-file)
+
   (after 'evil-leader
     (evil-leader/set-leader ",")
     (evil-leader/set-key
       "e" (kbd "C-x C-e"))
-    ;; ace jump mode, disable now, using maps above
+
     (after 'ace-jump-mode
       (evil-leader/set-key
-        "w w" 'ace-jump-word-mode
-        )))
+        "j w" 'ace-jump-word-mode
+        "j c" 'ace-jump-char-mode))
 
-  (after 'evil-nerd-commenter
-    (evilnc-default-hotkeys))
+    (after 'evil-nerd-commenter
+      (evil-leader/set-key
+        "c c" 'evilnc-comment-or-uncomment-lines))
 
-  (define-key evil-insert-state-map (kbd "RET") 'evil-ret-and-indent)
-  (define-key evil-motion-state-map "j" 'evil-next-visual-line)
-  (define-key evil-motion-state-map "k" 'evil-previous-visual-line)
+    (after 'projectile
+      (evil-leader/set-key
+        "p a" 'projectile-ag
+        "p d" 'projectile-find-dir
+        "p b" 'projectile-switch-to-buffer
+        "p r" 'projectile-recentf
+        ))
+
+    ) ;; eof (after 'evil-leader)
 
   ) ;; eof (after 'evil
 

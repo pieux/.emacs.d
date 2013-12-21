@@ -33,9 +33,10 @@
 (require 'surround)
 
 
-(global-evil-leader-mode)
 (evil-mode 1)
+(global-evil-leader-mode)
 (global-surround-mode 1)
+(global-evil-matchit-mode 1)
 
 
 (provide 'pkg-evil)
