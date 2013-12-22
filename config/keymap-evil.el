@@ -41,6 +41,7 @@
 
     (after 'ace-jump-mode
       (evil-leader/set-key
+        "j l" 'ace-jump-line-mode
         "j w" 'ace-jump-word-mode
         "j c" 'ace-jump-char-mode))
 
@@ -54,6 +55,7 @@
         "p d" 'projectile-find-dir
         "p b" 'projectile-switch-to-buffer
         "p r" 'projectile-recentf
+        "p p" 'projectile-switch-project
         ))
 
     ) ;; eof (after 'evil-leader)
