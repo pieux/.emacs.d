@@ -35,3 +35,6 @@
 
 ;; individual keymap
 (require 'keymap-evil)
+
+;; git
+(require 'pkg-git)
