@@ -4,7 +4,7 @@
   ;; use Emacs keymap in inserte state
   (define-key evil-insert-state-map (kbd "C-n") 'next-line)
   (define-key evil-insert-state-map (kbd "C-p") 'previous-line)
-  (define-key evil-insert-state-map (kbd "C-d") 'delete-backward-char)
+  (define-key evil-insert-state-map (kbd "C-d") 'delete-char)
   (define-key evil-insert-state-map (kbd "C-e") 'end-of-visual-line)
 
   ;; like vim behavior

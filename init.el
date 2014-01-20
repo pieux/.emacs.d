@@ -31,6 +31,7 @@
 ;; lang specific
 (require 'pkg-markdown)
 (require 'pkg-clojure)
+(require 'pkg-groovy)
 (require 'pkg-web)
 
 ;; individual keymap
